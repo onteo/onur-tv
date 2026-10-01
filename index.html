@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Onur TV</title>
+<style>
+  @font-face { font-family: "Poppins"; font-weight: 300; font-display: swap; src: url(fonts/poppins-l-300.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: "Poppins"; font-weight: 300; font-display: swap; src: url(fonts/poppins-300.woff2) format("woff2"); unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  @font-face { font-family: "Poppins"; font-weight: 400; font-display: swap; src: url(fonts/poppins-l-400.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: "Poppins"; font-weight: 400; font-display: swap; src: url(fonts/poppins-400.woff2) format("woff2"); unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  @font-face { font-family: "Poppins"; font-weight: 500; font-display: swap; src: url(fonts/poppins-l-500.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: "Poppins"; font-weight: 500; font-display: swap; src: url(fonts/poppins-500.woff2) format("woff2"); unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  @font-face { font-family: "Poppins"; font-weight: 600; font-display: swap; src: url(fonts/poppins-l-600.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: "Poppins"; font-weight: 600; font-display: swap; src: url(fonts/poppins-600.woff2) format("woff2"); unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  @font-face { font-family: "Poppins"; font-weight: 700; font-display: swap; src: url(fonts/poppins-l-700.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: "Poppins"; font-weight: 700; font-display: swap; src: url(fonts/poppins-700.woff2) format("woff2"); unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  @font-face { font-family: "Poppins"; font-weight: 800; font-display: swap; src: url(fonts/poppins-l-800.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: "Poppins"; font-weight: 800; font-display: swap; src: url(fonts/poppins-800.woff2) format("woff2"); unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  @font-face { font-family: "Great Vibes"; font-display: swap; src: url(fonts/greatvibes.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: "Great Vibes"; font-display: swap; src: url(fonts/greatvibes-ext.woff2) format("woff2"); unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  :root {
+    --bg: #070b16;
+    --panel: rgba(14,20,38,0.62);
+    --line: rgba(140,170,255,0.12);
+    --text: #eef1f7;
+    --muted: #8b93a7;
+    --accent: #ffb03b;
+    --pink: #ff4d6d;
+    --blue: #5b8cff;
+    --red: #e5484d;
+    --green: #34d399;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { overflow: hidden; background: #070b16; }
+  html, body { width: 1920px; height: 1080px; overflow: hidden; color: var(--text);
+    background: radial-gradient(1200px 800px at 15% 75%, #10204a 0%, rgba(7,11,22,0) 60%),
+                radial-gradient(900px 600px at 90% 10%, #1a1330 0%, rgba(7,11,22,0) 60%), var(--bg);
+    font-family: "Poppins", "LG Smart UI", "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  /* Ekran yanmasını önlemek için tüm içerik her dakika birkaç piksel kayar */
+  #stage { position: absolute; inset: 0; }
+
+  /* ---- Dönen dünya ---- */
+  #globe { position: absolute; left: -380px; top: 150px; width: 1240px; height: 1240px; pointer-events: none; }
+
+  /* ---- Marka ---- */
+  #brand { position: absolute; left: 60px; top: 54px; display: flex; align-items: center; gap: 18px; }
+  #brand svg { width: 92px; height: 92px; filter: drop-shadow(0 6px 18px rgba(255,120,90,0.35)); }
+  #brand .ad { font-size: 58px; font-weight: 800; letter-spacing: -1px; line-height: 1; }
+  #brand .ad span { background: linear-gradient(90deg, var(--accent), var(--pink)); -webkit-background-clip: text; background-clip: text; color: transparent; margin-left: 12px; }
+  #brand .alt { display: none; font-size: 17px; font-weight: 500; letter-spacing: 5px; color: var(--muted); margin-top: 6px; }
+  #brand .alt.cevrimdisi { display: block; }
+  #brand .alt.cevrimdisi { color: #fbbf24; }
+  #brand .alt.cevrimdisi i { background: #fbbf24; animation: none; }
+  #brand .alt i { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: var(--red); margin-right: 8px; vertical-align: 1px; animation: blink 1.4s infinite; }
+
+  /* ---- Saat ---- */
+  #saatKutu { position: absolute; left: 470px; top: 36px; }
+  #clock { font-size: 118px; font-weight: 300; letter-spacing: -3px; font-variant-numeric: tabular-nums; line-height: 1; }
+  #clock .sec { font-size: 44px; color: var(--muted); margin-left: 8px; letter-spacing: 0; }
+  #date { font-size: 26px; color: var(--muted); margin-top: 8px; }
+
+  /* ---- İsimler ---- */
+  #love { position: absolute; left: 900px; width: 520px; top: 62px; text-align: center; pointer-events: none;
+    font-family: "Great Vibes", "Snell Roundhand", cursive; font-size: 80px; color: #f6e7d8; white-space: nowrap;
+    text-shadow: 0 0 28px rgba(255,120,140,0.35); transition: opacity .8s ease; }
+  #love.gizli { opacity: 0; }
+  #love .kalp { display: inline-block; color: var(--pink); font-family: sans-serif; font-size: 50px; margin: 0 20px;
+    vertical-align: middle; animation: atis 1.6s ease-in-out infinite; }
+  @keyframes atis { 0%,100% { transform: scale(1); } 15% { transform: scale(1.22); } 30% { transform: scale(1); } 45% { transform: scale(1.15); } }
+
+  /* ---- Döviz ---- */
+  #fx { position: absolute; right: 60px; top: 56px; display: flex; gap: 18px; }
+  .fx { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 14px 26px; min-width: 190px; }
+  .fx .k { font-size: 18px; color: var(--muted); letter-spacing: 2px; font-weight: 500; }
+  .fx .v { font-size: 40px; font-weight: 500; font-variant-numeric: tabular-nums; margin-top: 2px; }
+
+  /* ---- Hava ---- */
+  #weather { position: absolute; left: 60px; top: 230px; width: 520px; height: 560px;
+    background: var(--panel); border: 1px solid var(--line); border-radius: 28px; padding: 36px 40px; }
+  #city { font-size: 22px; color: var(--muted); letter-spacing: 4px; font-weight: 500; }
+  #now { display: flex; align-items: center; gap: 24px; margin: 14px 0 4px; }
+  #now .ico { font-size: 110px; line-height: 1; }
+  #now .t { font-size: 116px; font-weight: 200; line-height: 1; }
+  #nowDesc { font-size: 30px; font-weight: 500; }
+  #nowExtra { font-size: 20px; color: var(--muted); margin-top: 6px; }
+  #days { margin-top: 24px; border-top: 1px solid var(--line); }
+  .day { display: grid; grid-template-columns: 150px 70px 1fr; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 26px; }
+  .day .i { font-size: 36px; }
+  .day .r { text-align: right; font-variant-numeric: tabular-nums; }
+  .day .r span { color: var(--muted); margin-left: 14px; }
+
+  /* ---- Navigasyon kartı ---- */
+  #nav { position: absolute; left: 60px; top: 810px; width: 404px; height: 110px; display: flex; align-items: center; gap: 22px;
+    padding: 0 30px; background: var(--panel); border: 1px solid var(--line); border-radius: 22px; cursor: pointer; }
+  #nav:hover { border-color: var(--accent); background: rgba(255,176,59,0.10); }
+  #nav .ni { width: 58px; height: 58px; border-radius: 16px; display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, var(--accent), var(--pink)); }
+  #nav .ni svg { width: 32px; height: 32px; }
+  #nav .nt { font-size: 18px; color: var(--muted); letter-spacing: 3px; font-weight: 500; }
+  #nav .nv { font-size: 30px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 250px; }
+  #nav .tus { margin-left: auto; font-size: 16px; color: var(--muted); border: 1px solid var(--line); border-radius: 8px; padding: 4px 10px; }
+
+  /* ---- Mikrofon düğmesi ---- */
+  #mikTus { position: absolute; left: 480px; top: 810px; width: 100px; height: 110px; border-radius: 22px; cursor: pointer;
+    background: var(--panel); border: 1px solid var(--line); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; }
+  #mikTus:hover { border-color: var(--accent); background: rgba(255,176,59,0.10); }
+  #mikTus svg { width: 40px; height: 40px; }
+  #mikTus .tus { font-size: 13px; color: var(--muted); letter-spacing: 1px; }
+  #mikTus.canli { border-color: var(--green); background: rgba(52,211,153,0.14); }
+
+  /* ---- Canlı mikrofon göstergesi ---- */
+  #mikCanli { position: absolute; left: 50%; top: 188px; transform: translateX(-50%); display: none; align-items: center; gap: 14px;
+    background: rgba(52,211,153,0.15); border: 1px solid rgba(52,211,153,0.5); border-radius: 999px; padding: 8px 22px; font-size: 20px; font-weight: 600; color: #bff5dc; z-index: 5; }
+  #mikCanli.acik { display: flex; }
+  #mikCanli .cubuk { display: flex; gap: 4px; align-items: center; height: 26px; }
+  #mikCanli .cubuk i { width: 5px; border-radius: 3px; background: var(--green); height: 4px; transition: height .08s linear; }
+
+  /* ---- Haberler ---- */
+  #news { position: absolute; left: 620px; right: 60px; top: 230px; height: 690px;
+    border-radius: 28px; overflow: hidden; background: #0e1424; box-shadow: 0 30px 80px rgba(0,0,0,0.45); }
+  .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1.2s ease; }
+  .slide.on { opacity: 1; }
+  .slide .img { position: absolute; inset: 0; background-size: cover; background-position: center; }
+  .slide .shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(5,8,15,0.92) 78%); }
+  .slide .body { position: absolute; left: 56px; right: 56px; bottom: 56px; opacity: 0; transform: translateY(20px); transition: opacity .4s ease, transform .4s ease; }
+  .slide.on .body { opacity: 1; transform: none; transition: opacity .8s ease .9s, transform .8s ease .9s; }
+  .src { display: inline-block; font-size: 20px; font-weight: 600; letter-spacing: 1px; color: #111; background: var(--accent);
+    padding: 6px 14px; border-radius: 8px; }
+  .src .when { font-weight: 400; margin-left: 10px; }
+  .slide h2 { font-size: 52px; line-height: 1.18; font-weight: 600; margin-top: 18px; }
+  .slide p { font-size: 26px; line-height: 1.45; color: #c9cfdc; margin-top: 14px; max-height: 76px; overflow: hidden; }
+  #bar { position: absolute; left: 0; bottom: 0; height: 6px; background: linear-gradient(90deg, var(--accent), var(--pink)); width: 0; }
+  #count { position: absolute; right: 30px; top: 26px; font-size: 20px; color: rgba(255,255,255,0.75);
+    background: rgba(0,0,0,0.45); padding: 6px 14px; border-radius: 8px; font-variant-numeric: tabular-nums; z-index: 2; }
+
+  /* ---- Kayan şerit ---- */
+  #ticker { position: absolute; left: 0; right: 0; bottom: 0; height: 110px; display: flex; align-items: center; overflow: hidden;
+    background: rgba(4,7,14,0.92); border-top: 1px solid var(--line); overflow: hidden; }
+  #live { flex: none; height: 100%; display: flex; align-items: center; gap: 12px; padding: 0 36px; background: var(--red);
+    font-size: 28px; font-weight: 700; letter-spacing: 3px; z-index: 2; }
+  #live i { width: 14px; height: 14px; border-radius: 50%; background: #fff; animation: blink 1.4s infinite; }
+  @keyframes blink { 50% { opacity: .2; } }
+  #track { white-space: nowrap; font-size: 32px; will-change: transform; padding-left: 40px; animation: kay linear infinite; animation-play-state: paused; }
+  @keyframes kay { from { transform: translate3d(0,0,0); } to { transform: translate3d(-50%,0,0); } }
+  #track b { color: var(--accent); margin: 0 30px; }
+  #seritAlan { flex: 1; min-width: 0; height: 100%; display: flex; align-items: center; overflow: hidden; }
+
+  /* ---- Son dakika ---- */
+  #live.sd { position: relative; overflow: hidden; color: #fff; text-shadow: 0 2px 8px rgba(80,0,10,0.5);
+    background: linear-gradient(120deg, #ff3b5c 0%, #e11d2e 45%, #9f0a1c 100%); box-shadow: inset 0 0 30px rgba(255,255,255,0.12); }
+  #live.sd i { background: #fff; box-shadow: 0 0 12px #fff; }
+  #live.sd::after { content: ""; position: absolute; top: 0; bottom: 0; left: -60%; width: 50%;
+    background: linear-gradient(100deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0) 100%);
+    animation: etiketParla 3.2s ease-in-out infinite; }
+  @keyframes etiketParla { 0% { transform: translateX(0); } 60%, 100% { transform: translateX(340%); } }
+  #track .sdMesaj { color: #ffe066; font-weight: 700; }
+  #track .sdEtiket { display: inline-block; background: #e5484d; color: #fff; font-size: 22px; font-weight: 800; letter-spacing: 2px;
+    padding: 4px 12px; border-radius: 6px; margin-right: 16px; vertical-align: 4px; }
+  #ticker.flas { animation: seritFlas .5s ease 4; }
+  @keyframes seritFlas { 50% { background: rgba(229,72,77,0.55); } }
+  #track .sdEtiket { background: linear-gradient(120deg, #ff3b5c, #c1121f); }
+  #ticker.patla #track .sdEtiket { animation: etiketPatla .9s cubic-bezier(.2,1.6,.4,1) 6; }
+  @keyframes etiketPatla {
+    0%   { transform: scale(1);    box-shadow: 0 0 0 0 rgba(255,59,92,0); filter: brightness(1); }
+    25%  { transform: scale(1.22); box-shadow: 0 0 34px 10px rgba(255,90,110,0.85); filter: brightness(1.7); }
+    60%  { transform: scale(0.96); box-shadow: 0 0 10px 2px rgba(255,59,92,0.4); filter: brightness(1.1); }
+    100% { transform: scale(1);    box-shadow: 0 0 0 0 rgba(255,59,92,0); filter: brightness(1); } }
+  #ticker.patla .sdMesaj { animation: mesajParla .9s ease 6; }
+  @keyframes mesajParla { 25% { color: #fff; text-shadow: 0 0 18px rgba(255,224,102,0.9); } }
+  /* Bandın içinden geçen ışık */
+  #isik { position: absolute; top: 0; bottom: 0; left: 0; width: 420px; pointer-events: none; z-index: 1; opacity: 0;
+    background: linear-gradient(100deg, rgba(255,255,255,0) 0%, rgba(255,120,140,0.18) 30%, rgba(255,255,255,0.55) 50%, rgba(255,120,140,0.18) 70%, rgba(255,255,255,0) 100%); }
+  #ticker.patla #isik { animation: isikGec 1.6s ease-in-out 3; }
+  @keyframes isikGec { 0% { opacity: 1; transform: translateX(-420px); } 100% { opacity: 1; transform: translateX(1920px); } }
+
+  /* ---- Mesaj QR kutusu (şeridin sağ ucu) ---- */
+  #mesajQr { flex: none; height: 100%; display: flex; align-items: center; gap: 14px; padding: 0 16px 0 18px;
+    background: linear-gradient(90deg, rgba(4,7,14,0), rgba(14,20,38,0.98) 18%); z-index: 2; }
+  #mesajQr .kod { width: 92px; height: 92px; background: #fff; border-radius: 10px; padding: 6px; }
+  #mesajQr .kod svg { width: 100%; height: 100%; display: block; }
+  #mesajQr .yazi { font-size: 18px; line-height: 1.25; color: var(--muted); font-weight: 500; }
+  #mesajQr .yazi b { display: block; color: var(--text); font-size: 21px; font-weight: 700; }
+
+  #msg { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); font-size: 30px; color: var(--muted); }
+
+  /* ---- Navigasyon penceresi ---- */
+  #modal { position: absolute; inset: 0; background: rgba(3,5,10,0.80); display: none; align-items: center; justify-content: center; z-index: 10; }
+  #modal.acik { display: flex; }
+  #kutu { width: 1360px; background: linear-gradient(180deg, #141b30, #0e1426); border: 1px solid var(--line); border-radius: 32px;
+    padding: 44px 52px; box-shadow: 0 40px 120px rgba(0,0,0,0.6); animation: kutuGel .45s cubic-bezier(.2,.9,.3,1.2); }
+  @keyframes kutuGel { from { opacity: 0; transform: translateY(30px) scale(.97); } }
+  #kutu h3 { font-size: 40px; font-weight: 600; display: flex; align-items: center; gap: 16px; }
+  #kutu h3 .ni { width: 54px; height: 54px; border-radius: 14px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--accent), var(--pink)); }
+  #kutu h3 .ni svg { width: 30px; height: 30px; }
+  #kutu .bas { margin-top: 10px; font-size: 22px; color: var(--muted); }
+  #kutu .bas b { color: var(--text); font-weight: 500; }
+  #secenek { margin-top: 24px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .opt, #ara { font: inherit; font-size: 24px; color: var(--text); background: rgba(255,255,255,0.05); border: 2px solid transparent;
+    border-radius: 16px; padding: 16px 22px; text-align: left; outline: none; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #ara { grid-column: 1 / -1; cursor: text; }
+  #ara::placeholder { color: var(--muted); }
+  .opt.odak, #ara.odak { border-color: var(--accent); background: rgba(255,176,59,0.12); }
+  .opt.secili { background: rgba(255,77,109,0.14); }
+
+  #harita { margin-top: 24px; display: grid; grid-template-columns: 1fr 340px; gap: 24px; height: 340px; }
+  #haritaKutu { position: relative; border-radius: 22px; overflow: hidden; border: 1px solid var(--line);
+    background: radial-gradient(600px 300px at 50% 50%, #13224a 0%, #0a1020 100%); }
+  #haritaKutu svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .izgara { stroke: rgba(120,160,255,0.08); stroke-width: 1; }
+  .yolGolge { fill: none; stroke: rgba(255,176,59,0.18); stroke-width: 16; stroke-linecap: round; stroke-linejoin: round; }
+  .yol { fill: none; stroke: url(#yolRenk); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+  .pin { transform-box: fill-box; transform-origin: 50% 100%; }
+  .pin.dus { animation: dus .7s cubic-bezier(.3,1.6,.5,1) both; }
+  @keyframes dus { from { transform: translateY(-60px) scale(.4); opacity: 0; } to { transform: none; opacity: 1; } }
+  .halka { transform-box: fill-box; transform-origin: 50% 50%; animation: halka 1.8s ease-out infinite; }
+  @keyframes halka { from { transform: scale(.4); opacity: .9; } to { transform: scale(2.4); opacity: 0; } }
+  .etiket { font-size: 20px; font-weight: 600; fill: #fff; paint-order: stroke; stroke: rgba(7,11,22,0.9); stroke-width: 6px; }
+  #bekle { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); color: var(--muted); font-size: 24px; }
+
+  #bilgi { border-radius: 22px; border: 1px solid var(--line); background: rgba(255,255,255,0.03); padding: 30px; display: flex; flex-direction: column; justify-content: center; }
+  #bilgi .hedef { font-size: 24px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #bilgi .dk { font-size: 96px; font-weight: 700; line-height: 1.05; margin-top: 6px;
+    background: linear-gradient(90deg, var(--accent), var(--pink)); -webkit-background-clip: text; background-clip: text; color: transparent; font-variant-numeric: tabular-nums; }
+  #bilgi .km { font-size: 24px; color: var(--muted); margin-top: 4px; }
+  #bilgi .not { font-size: 16px; color: var(--muted); margin-top: 18px; line-height: 1.4; }
+  #mikModal { position: absolute; inset: 0; background: rgba(3,5,10,0.82); display: none; align-items: center; justify-content: center; z-index: 11; }
+  #mikModal.acik { display: flex; }
+  #mikKutu { width: 1100px; display: grid; grid-template-columns: 400px 1fr; gap: 56px; align-items: center; background: linear-gradient(180deg, #141b30, #0e1426);
+    border: 1px solid var(--line); border-radius: 32px; padding: 56px; box-shadow: 0 40px 120px rgba(0,0,0,0.6); animation: kutuGel .45s cubic-bezier(.2,.9,.3,1.2); }
+  #qr { width: 400px; height: 400px; background: #fff; border-radius: 24px; padding: 22px; display: flex; align-items: center; justify-content: center; }
+  #qr svg, #qr img { width: 100%; height: 100%; }
+  #mikKutu h3 { font-size: 44px; font-weight: 700; }
+  #mikKutu ol { margin-top: 26px; padding-left: 34px; font-size: 26px; line-height: 1.7; color: #d5dae6; }
+  #mikDurum { margin-top: 30px; display: inline-flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 600; padding: 10px 22px; border-radius: 999px;
+    background: rgba(255,255,255,0.06); color: var(--muted); }
+  #mikDurum i { width: 12px; height: 12px; border-radius: 50%; background: var(--muted); }
+  #mikDurum.bekle i { background: var(--accent); animation: blink 1.2s infinite; }
+  #mikDurum.ok { color: #bff5dc; background: rgba(52,211,153,0.14); }
+  #mikDurum.ok i { background: var(--green); }
+  #mikDurum.hata { color: #ffb3c0; background: rgba(255,77,109,0.14); }
+  #mikDurum.hata i { background: var(--pink); }
+  #mikKutu .ipucu2 { margin-top: 22px; font-size: 18px; color: var(--muted); }
+
+  #kutu .ipucu { margin-top: 18px; font-size: 18px; color: var(--muted); }
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="globe" width="620" height="620"></canvas>
+
+  <div id="brand">
+    <svg viewBox="0 0 100 100" aria-hidden="true">
+      <defs>
+        <linearGradient id="tvRenk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffb03b"/><stop offset="1" stop-color="#ff4d6d"/></linearGradient>
+        <linearGradient id="ekranRenk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2550"/><stop offset="1" stop-color="#0b1022"/></linearGradient>
+      </defs>
+      <path d="M36 14 L50 27 L64 14" fill="none" stroke="url(#tvRenk)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="36" cy="13" r="4" fill="#ffb03b"/><circle cx="64" cy="13" r="4" fill="#ff4d6d"/>
+      <rect x="8" y="27" width="84" height="58" rx="14" fill="url(#tvRenk)"/>
+      <rect x="15" y="34" width="70" height="44" rx="8" fill="url(#ekranRenk)"/>
+      <path d="M50 70 C 38 61, 33 55, 33 49 C 33 44, 37 41, 41 41 C 45 41, 48 43, 50 46 C 52 43, 55 41, 59 41 C 63 41, 67 44, 67 49 C 67 55, 62 61, 50 70 Z" fill="#ff4d6d"/>
+      <rect x="30" y="88" width="40" height="5" rx="2.5" fill="url(#tvRenk)" opacity=".8"/>
+    </svg>
+    <div>
+      <div class="ad">Onur<span>TV</span></div>
+      <div class="alt" id="yayinDurum"><i></i><span>YAYINDA</span></div>
+    </div>
+  </div>
+
+  <div id="saatKutu">
+    <div id="clock">--:--</div>
+    <div id="date"></div>
+  </div>
+
+  <div id="love">Onur<span class="kalp">♥</span>Tuğba</div>
+
+  <div id="fx"></div>
+
+  <section id="weather">
+    <div id="city"></div>
+    <div id="now"><div class="ico"></div><div class="t"></div></div>
+    <div id="nowDesc"></div>
+    <div id="nowExtra"></div>
+    <div id="days"></div>
+  </section>
+
+  <div id="nav" onclick="navAc()">
+    <div class="ni"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-8-8 18-2-8z"/></svg></div>
+    <div><div class="nt">NAVİGASYON</div><div class="nv" id="navOzet">Nereye gidiyoruz?</div></div>
+    <div class="tus">▲</div>
+  </div>
+
+  <div id="mikTus" onclick="mikAc()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3" fill="#fff"/><path d="M5 10a7 7 0 0 0 14 0"/><line x1="12" y1="17" x2="12" y2="22"/></svg>
+    <div class="tus">MİKROFON</div>
+  </div>
+
+  <div id="mikCanli"><span>🎤 Canlı mikrofon</span><span class="cubuk"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+  <audio id="mikSes" autoplay></audio>
+  <audio id="sdSes" src="ses/sondakika.mp3" preload="auto"></audio>
+
+  <section id="news">
+    <div id="msg">Haberler yükleniyor…</div>
+    <div id="count"></div>
+    <div id="bar"></div>
+  </section>
+
+  <div id="modal" onclick="if(event.target===this)navKapat()">
+    <div id="kutu">
+      <h3><span class="ni"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-8-8 18-2-8z"/></svg></span>Nereye gidiyoruz?</h3>
+      <div class="bas">Başlangıç: <b id="evAd">Ev konumu seçilmedi</b> · <a href="#" id="evDegis" onclick="evAyarla();return false;" style="color:var(--accent)">🏠 değiştir</a></div>
+      <div id="secenek"></div>
+      <div id="harita">
+        <div id="haritaKutu"><div id="bekle">Bir hedef seç, rotayı çizeyim.</div></div>
+        <div id="bilgi"></div>
+      </div>
+      <div class="ipucu">▲▼◀▶ seç · OK onayla · Geri kapat</div>
+    </div>
+  </div>
+
+  <div id="mikModal" onclick="if(event.target===this)mikKapat()">
+    <div id="mikKutu">
+      <div id="qr"></div>
+      <div>
+        <h3>🎤 Telefonu mikrofon yap</h3>
+        <ol>
+          <li>iPhone kamerasını QR koda tut</li>
+          <li>Açılan sayfada mikrofona dokun</li>
+          <li>İzin ver ve konuş, sesin buradan çıksın</li>
+        </ol>
+        <div id="mikDurum" class="bekle"><i></i><span>Telefon bekleniyor…</span></div>
+        <div class="ipucu2">Yeşil tuş: bu ekran · Geri: kapat</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="ticker">
+    <div id="live"><i></i><span id="liveYazi">CANLI</span></div>
+    <div id="seritAlan"><div id="track"></div></div>
+    <div id="isik"></div>
+    <div id="mesajQr"><div class="kod" id="mesajKod"></div></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  function sigdir() {
+    var o = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+    var b = document.body; if (!b) return;
+    b.style.transformOrigin = "0 0";
+    b.style.transform = "translate(" + Math.max(0, (window.innerWidth - 1920 * o) / 2) + "px," + Math.max(0, (window.innerHeight - 1080 * o) / 2) + "px) scale(" + o + ")";
+  }
+  window.addEventListener("resize", sigdir);
+  document.addEventListener("DOMContentLoaded", sigdir);
+})();
+</script>
+<script src="lib/d3-array.min.js"></script>
+<script src="lib/d3-geo.min.js"></script>
+<script src="lib/topojson.min.js"></script>
+<script src="lib/land.js"></script>
+<script src="lib/peerjs.min.js"></script>
+<script src="lib/qrcode.js"></script>
+<script>
+// ---- AYARLAR ----
+var AYAR = {
+  sehir: "İstanbul", enlem: 41.01, boylam: 28.97,
+  haberler: [
+    { ad: "AA",  url: "https://www.aa.com.tr/tr/rss/default?cat=guncel" },
+    { ad: "NTV", url: "https://www.ntv.com.tr/turkiye.rss" },
+    { ad: "BBC", url: "https://feeds.bbci.co.uk/turkce/rss.xml" }
+  ],
+  slaytSuresi: 12000
+};
+
+var $ = function (s) { return document.querySelector(s); };
+var AYLAR = ["Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık"];
+var GUNLER = ["Pazar","Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi"];
+function pad(n) { return (n < 10 ? "0" : "") + n; }
+function esc(s) { return String(s || "").replace(/[&<>"]/g, function (c) { return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]; }); }
+function hafiza(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
+
+function get(url, cb) {
+  var x = new XMLHttpRequest();
+  x.open("GET", url, true);
+  x.timeout = 20000;
+  x.onload = function () { cb(x.status >= 200 && x.status < 300 ? x.responseText : null); };
+  x.onerror = x.ontimeout = function () { cb(null); };
+  x.send();
+}
+
+// ---- DÜNYA ----
+// Sabit: Türkiye öne bakacak şekilde bir kez çizilir (yarı çözünürlükte, CSS ile büyütülür).
+(function () {
+  if (!window.d3 || !window.topojson || !window.LAND) return;
+  var cv = $("#globe"), ctx = cv.getContext("2d"), R = 280, C = 310;
+  var proj = d3.geoOrthographic().scale(R).translate([C, C]).clipAngle(90).rotate([-25, -32]);
+  var path = d3.geoPath(proj, ctx);
+  var land = topojson.feature(LAND, LAND.objects.land);
+  var grid = d3.geoGraticule10();
+  var ist = [28.97, 41.01];
+  var atm = ctx.createRadialGradient(C, C, R * 0.9, C, C, R * 1.08);
+  atm.addColorStop(0, "rgba(91,140,255,0.16)"); atm.addColorStop(1, "rgba(91,140,255,0)");
+  var kure = ctx.createRadialGradient(C - 90, C - 100, 20, C, C, R);
+  kure.addColorStop(0, "rgba(40,70,150,0.55)"); kure.addColorStop(1, "rgba(10,18,45,0.55)");
+  function ciz() {
+    ctx.clearRect(0, 0, 620, 620);
+    ctx.fillStyle = atm; ctx.beginPath(); ctx.arc(C, C, R * 1.08, 0, 7); ctx.fill();
+    ctx.fillStyle = kure; ctx.beginPath(); ctx.arc(C, C, R, 0, 7); ctx.fill();
+    ctx.beginPath(); path(grid); ctx.strokeStyle = "rgba(120,160,255,0.10)"; ctx.lineWidth = 0.6; ctx.stroke();
+    ctx.beginPath(); path(land); ctx.fillStyle = "rgba(110,150,255,0.22)"; ctx.fill();
+    ctx.strokeStyle = "rgba(160,190,255,0.35)"; ctx.lineWidth = 0.7; ctx.stroke();
+    var p = proj(ist);
+    ctx.beginPath(); ctx.arc(p[0], p[1], 10, 0, 7); ctx.strokeStyle = "rgba(255,176,59,0.45)"; ctx.lineWidth = 1.5; ctx.stroke();
+    ctx.beginPath(); ctx.arc(p[0], p[1], 4, 0, 7); ctx.fillStyle = "#ffb03b"; ctx.fill();
+  }
+  ciz();
+})();
+
+// ---- SAAT ----
+function saat() {
+  var d = new Date();
+  $("#clock").textContent = pad(d.getHours()) + ":" + pad(d.getMinutes());
+  $("#date").textContent = d.getDate() + " " + AYLAR[d.getMonth()] + " " + d.getFullYear() + ", " + GUNLER[d.getDay()];
+}
+setInterval(saat, 1000); saat();
+
+// ---- HAVA DURUMU ----
+function wmo(c) {
+  if (c === 0) return ["☀️", "Açık"];
+  if (c <= 2) return ["🌤️", "Az bulutlu"];
+  if (c === 3) return ["☁️", "Kapalı"];
+  if (c <= 48) return ["🌫️", "Sisli"];
+  if (c <= 57) return ["🌦️", "Çisenti"];
+  if (c <= 67) return ["🌧️", "Yağmurlu"];
+  if (c <= 77) return ["❄️", "Karlı"];
+  if (c <= 82) return ["🌧️", "Sağanak"];
+  if (c <= 86) return ["🌨️", "Kar sağanağı"];
+  return ["⛈️", "Gök gürültülü"];
+}
+function hava() {
+  var u = "https://api.open-meteo.com/v1/forecast?latitude=" + AYAR.enlem + "&longitude=" + AYAR.boylam +
+    "&current=temperature_2m,apparent_temperature,relative_humidity_2m,wind_speed_10m,weather_code" +
+    "&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=auto&forecast_days=4";
+  get(u, function (t) {
+    if (!t) return;
+    hafiza("onbellekHava", t);
+    havaCiz(t);
+  });
+}
+function havaCiz(t) {
+  try {
+    var d = JSON.parse(t), c = d.current, w = wmo(c.weather_code);
+    $("#city").textContent = AYAR.sehir.toLocaleUpperCase("tr");
+    $("#now .ico").textContent = w[0];
+    $("#now .t").textContent = Math.round(c.temperature_2m) + "°";
+    $("#nowDesc").textContent = w[1];
+    $("#nowExtra").textContent = "Hissedilen " + Math.round(c.apparent_temperature) + "° · Nem %" + c.relative_humidity_2m + " · Rüzgar " + Math.round(c.wind_speed_10m) + " km/s";
+    var h = "";
+    for (var i = 1; i < d.daily.time.length; i++) {
+      var g = new Date(d.daily.time[i] + "T12:00:00"), wi = wmo(d.daily.weather_code[i]);
+      h += '<div class="day"><div>' + (i === 1 ? "Yarın" : GUNLER[g.getDay()]) + '</div><div class="i">' + wi[0] +
+        '</div><div class="r">' + Math.round(d.daily.temperature_2m_max[i]) + "°<span>" + Math.round(d.daily.temperature_2m_min[i]) + "°</span></div></div>";
+    }
+    $("#days").innerHTML = h;
+  } catch (e) {}
+}
+if (hafiza("onbellekHava")) havaCiz(hafiza("onbellekHava"));
+hava(); setInterval(hava, 30 * 60000);
+
+// ---- DÖVİZ ----
+function doviz() {
+  get("https://open.er-api.com/v6/latest/TRY", function (t) {
+    if (!t) return;
+    hafiza("onbellekDoviz", t);
+    dovizCiz(t);
+  });
+}
+function dovizCiz(t) {
+  try {
+    var r = JSON.parse(t).rates, h = "";
+    [["USD","DOLAR"],["EUR","EURO"]].forEach(function (p) {
+      h += '<div class="fx"><div class="k">' + p[1] + '</div><div class="v">₺' + (1 / r[p[0]]).toFixed(2).replace(".", ",") + "</div></div>";
+    });
+    $("#fx").innerHTML = h;
+  } catch (e) {}
+}
+if (hafiza("onbellekDoviz")) dovizCiz(hafiza("onbellekDoviz"));
+doviz(); setInterval(doviz, 60 * 60000);
+
+// ---- HABERLER ----
+var haberler = [], sira = 0, slaytZaman = null;
+function metin(el, sec) { var n = el.querySelector(sec); return n ? n.textContent.trim() : ""; }
+function temizle(s) { var d = document.createElement("div"); d.innerHTML = s; return (d.textContent || "").trim(); }
+function resimBul(el) {
+  var n = el.getElementsByTagName("image")[0];
+  if (n && n.textContent.trim()) return n.textContent.trim();
+  var m = el.getElementsByTagName("media:thumbnail")[0] || el.getElementsByTagName("thumbnail")[0] || el.getElementsByTagName("enclosure")[0];
+  if (m && m.getAttribute("url")) return m.getAttribute("url");
+  var c = metin(el, "content") || metin(el, "description");
+  var r = /<img[^>]+src="([^"]+)"/.exec(c);
+  return r ? r[1].replace(/&?format=webp/, "") : "";
+}
+function oku(kaynak, xml) {
+  var doc = new DOMParser().parseFromString(xml, "text/xml"), out = [];
+  var items = doc.querySelectorAll("item, entry");
+  for (var i = 0; i < items.length && i < 12; i++) {
+    var el = items[i];
+    var zaman = new Date(metin(el, "pubDate") || metin(el, "published") || metin(el, "updated"));
+    out.push({
+      kaynak: kaynak, baslik: metin(el, "title"),
+      ozet: temizle(metin(el, "description") || metin(el, "summary")),
+      resim: resimBul(el), zaman: isNaN(zaman) ? 0 : zaman.getTime()
+    });
+  }
+  return out;
+}
+function once(ms) {
+  var dk = Math.round((Date.now() - ms) / 60000);
+  if (!ms || dk < 0) return "";
+  if (dk < 60) return dk + " dk önce";
+  if (dk < 1440) return Math.round(dk / 60) + " sa önce";
+  return Math.round(dk / 1440) + " gün önce";
+}
+function haberCek() {
+  // Tarayıcı haber sitelerinden doğrudan okuyamadığı için haberler bu sitenin yanındaki dosyadan gelir
+  get("haberler.json?t=" + Date.now(), function (t) {
+    var yeni = [];
+    try { yeni = JSON.parse(t).haberler || []; } catch (e) {}
+    if (!yeni.length) {
+      cevrimDurumu(false);
+      if (!haberler.length) $("#msg").textContent = "Haberlere ulaşılamadı, tekrar denenecek.";
+      return;
+    }
+    haberler = yeni;
+    cevrimDurumu(true);
+    hafiza("onbellekHaber", JSON.stringify({ zaman: Date.now(), haberler: haberler.slice(0, 40) }));
+    ciz();
+  });
+}
+function ciz() {
+  var box = $("#news");
+  Array.prototype.slice.call(box.querySelectorAll(".slide")).forEach(function (s) { s.remove(); });
+  $("#msg").style.display = "none";
+  var resimli = haberler.filter(function (h) { return h.resim; }).slice(0, 15);
+  resimli.forEach(function (h) {
+    var s = document.createElement("div");
+    s.className = "slide";
+    var yedek = resimDepo[h.resim];
+    s.innerHTML = '<div class="img" style="background-image:url(\'' + esc(h.resim) + '\')' + (yedek ? ", url('" + yedek + "')" : "") + '"></div><div class="shade"></div>' +
+      '<div class="body"><span class="src">' + esc(h.kaynak) + '<span class="when">' + once(h.zaman) + "</span></span>" +
+      "<h2>" + esc(h.baslik) + "</h2><p>" + esc(h.ozet) + "</p></div>";
+    box.insertBefore(s, $("#count"));
+  });
+  sira = -1; ilerle(1);
+  seritCiz();
+}
+
+// ---- SON DAKİKA (telefondan gelen mesajlar) ----
+var SD_SURE = 30 * 60000;   // mesaj 30 dakika şeritte kalır
+var sonDakikalar = [];
+try { sonDakikalar = JSON.parse(hafiza("sonDakika") || "[]"); } catch (e) {}
+function sdTemizle() { var simdi = Date.now(); sonDakikalar = sonDakikalar.filter(function (m) { return simdi - m.zaman < SD_SURE; }); }
+function seritCiz() {
+  sdTemizle();
+  var sd = "";
+  sonDakikalar.forEach(function (m) {
+    sd += '<span class="sdEtiket">SON DAKİKA</span><span class="sdMesaj">' + esc(m.metin) + '</span>' +
+      (m.kimden ? ' <span style="color:var(--muted)">— ' + esc(m.kimden) + "</span>" : "") + "<b>●</b>";
+  });
+  // En yeni mesaj ilk turda 3 kez arka arkaya geçer
+  var t = "";
+  if (vurgu) {
+    var v = '<span class="sdEtiket">SON DAKİKA</span><span class="sdMesaj">' + esc(vurgu.metin) + '</span>' +
+      (vurgu.kimden ? ' <span style="color:var(--muted)">— ' + esc(vurgu.kimden) + "</span>" : "") + "<b>●</b>";
+    t += v + v + v;
+  }
+  // Son dakika mesajları en başta ve her 4 haberde bir tekrar geçer
+  t += sd;
+  haberler.slice(0, 24).forEach(function (h, i) {
+    t += esc(h.kaynak) + " · " + esc(h.baslik) + "<b>●</b>";
+    if (sd && (i + 1) % 4 === 0) t += sd;
+  });
+  $("#track").innerHTML = t + t;
+  var var_ = sonDakikalar.length > 0;
+  $("#live").className = var_ ? "sd" : "";
+  $("#liveYazi").textContent = var_ ? "SON DAKİKA" : "CANLI";
+  kaydirBaslat();
+}
+var vurgu = null, vurguZaman = null;
+function sonDakikaEkle(metin, kimden, gecikmeSn, ses) {
+  metin = String(metin || "").replace(/\s+/g, " ").trim().slice(0, 160);
+  kimden = String(kimden || "").trim().slice(0, 30);
+  if (!metin) return false;
+  gecikmeSn = Math.max(0, Math.min(24 * 3600, parseInt(gecikmeSn, 10) || 0));
+  if (gecikmeSn > 0) {
+    // İleri tarihli: TV kapanıp açılsa da kaybolmasın diye kaydedilir
+    bekleyenler.push({ metin: metin, kimden: kimden, ses: !!ses, yayin: Date.now() + gecikmeSn * 1000, eklendi: Date.now() });
+    hafiza("sdBekleyen", JSON.stringify(bekleyenler));
+    bekleyenleriKur();
+    return true;
+  }
+  yayinla(metin, kimden, ses);
+  return true;
+}
+function yayinla(metin, kimden, ses) {
+  if (ses) {
+    var a = $("#sdSes");
+    try { a.pause(); a.currentTime = 0; a.volume = 1; var o = a.play(); if (o && o.catch) o.catch(function () {}); } catch (e) {}
+  }
+  sonDakikalar.unshift({ metin: metin, kimden: kimden, zaman: Date.now() });
+  sonDakikalar = sonDakikalar.slice(0, 5);
+  hafiza("sonDakika", JSON.stringify(sonDakikalar));
+  vurgu = { metin: metin, kimden: kimden };
+  seritCiz();
+  var tk = $("#ticker");
+  tk.classList.remove("flas", "patla"); tk.offsetWidth; tk.classList.add("flas", "patla");
+  setTimeout(function () { tk.classList.remove("patla"); }, 6000);
+  // 3 tekrar ekrandan tamamen geçince bandı normal sırasıyla yeniden çiz
+  clearTimeout(vurguZaman);
+  var etiketler = document.querySelectorAll("#track .sdEtiket");
+  var bitis = etiketler[3] ? etiketler[3].offsetLeft : 2400;
+  vurguZaman = setTimeout(function () { vurgu = null; seritCiz(); }, (bitis + 1600) / 90 * 1000);
+}
+// Telefondan gelen silme komutu: hepsi=true ise bant ve zamanlanmış mesajlar tamamen temizlenir,
+// değilse yalnızca en son gelen mesaj (yayınlanmışsa o, yoksa en son zamanlanan) geri alınır.
+function bandiTemizle(hepsi) {
+  var silinen = 0;
+  if (hepsi) {
+    silinen = sonDakikalar.length + bekleyenler.length;
+    sonDakikalar = []; bekleyenler = [];
+  } else {
+    var sonBekleyen = bekleyenler.length ? bekleyenler.reduce(function (a, b) { return (a.eklendi || 0) > (b.eklendi || 0) ? a : b; }) : null;
+    var sonYayin = sonDakikalar[0];
+    if (sonBekleyen && (!sonYayin || (sonBekleyen.eklendi || 0) > sonYayin.zaman)) {
+      bekleyenler = bekleyenler.filter(function (m) { return m !== sonBekleyen; }); silinen = 1;
+    } else if (sonYayin) {
+      sonDakikalar.shift(); silinen = 1;
+    }
+  }
+  hafiza("sonDakika", JSON.stringify(sonDakikalar));
+  hafiza("sdBekleyen", JSON.stringify(bekleyenler));
+  bekleyenleriKur();
+  vurgu = null; clearTimeout(vurguZaman);
+  try { $("#sdSes").pause(); } catch (e) {}
+  $("#ticker").classList.remove("patla", "flas");
+  seritCiz();
+  return silinen;
+}
+var bekleyenler = [], bekleyenZaman = null;
+try { bekleyenler = JSON.parse(hafiza("sdBekleyen") || "[]"); } catch (e) {}
+function bekleyenleriKur() {
+  clearTimeout(bekleyenZaman);
+  if (!bekleyenler.length) return;
+  bekleyenler.sort(function (a, b) { return a.yayin - b.yayin; });
+  var ilk = bekleyenler[0];
+  bekleyenZaman = setTimeout(function () {
+    var simdi = Date.now();
+    var hazir = bekleyenler.filter(function (m) { return m.yayin <= simdi + 200; });
+    bekleyenler = bekleyenler.filter(function (m) { return m.yayin > simdi + 200; });
+    hafiza("sdBekleyen", JSON.stringify(bekleyenler));
+    hazir.forEach(function (m) { yayinla(m.metin, m.kimden, m.ses); });
+    bekleyenleriKur();
+  }, Math.max(0, ilk.yayin - Date.now()));
+}
+bekleyenleriKur();
+setInterval(function () { var n = sonDakikalar.length; sdTemizle(); if (n !== sonDakikalar.length) { hafiza("sonDakika", JSON.stringify(sonDakikalar)); seritCiz(); } }, 60000);
+function mesajQrCiz() {
+  if (!window.qrcode) return;
+  var q = qrcode(0, "L"); q.addData("https://onteo.github.io/onur-tv-mikrofon/mesaj.html#" + MIK.id); q.make();
+  $("#mesajKod").innerHTML = q.createSvgTag({ cellSize: 4, margin: 0, scalable: true });
+}
+function ilerle(yon) {
+  var s = document.querySelectorAll("#news .slide");
+  if (!s.length) return;
+  if (s[sira]) s[sira].className = "slide";
+  sira = (sira + yon + s.length) % s.length;
+  s[sira].className = "slide on";
+  $("#count").textContent = (sira + 1) + " / " + s.length;
+  var bar = $("#bar");
+  bar.style.transition = "none"; bar.style.width = "0";
+  bar.offsetWidth;
+  bar.style.transition = "width " + AYAR.slaytSuresi + "ms linear"; bar.style.width = "100%";
+  clearTimeout(slaytZaman);
+  slaytZaman = setTimeout(function () { ilerle(1); }, AYAR.slaytSuresi);
+}
+// ---- ÇEVRİMDIŞI ÖNBELLEK ----
+// Son başarılı haberler ve küçültülmüş fotoğrafları TV'de saklanır; internet yokken bunlar gösterilir.
+var resimDepo = {};
+try { resimDepo = JSON.parse(hafiza("onbellekResim") || "{}"); } catch (e) {}
+var sonGuncelleme = 0;
+
+function cevrimDurumu(cevrimici) {
+  var el = $("#yayinDurum");
+  if (cevrimici) { sonGuncelleme = Date.now(); el.className = "alt"; el.querySelector("span").textContent = "YAYINDA"; return; }
+  var z = sonGuncelleme || (JSON.parse(hafiza("onbellekHaber") || "{}").zaman || 0);
+  var d = new Date(z);
+  el.className = "alt cevrimdisi";
+  el.querySelector("span").textContent = z ? "ÇEVRİMDIŞI · " + pad(d.getHours()) + ":" + pad(d.getMinutes()) + " İTİBARIYLA" : "ÇEVRİMDIŞI";
+}
+
+// Fotoğrafı indirip 800 piksele küçültür, JPEG data URI olarak verir
+function resimKucult(url, bitti) {
+  var x = new XMLHttpRequest();
+  x.open("GET", url, true); x.responseType = "blob"; x.timeout = 20000;
+  x.onload = function () {
+    if (x.status < 200 || x.status >= 300) return bitti(null);
+    var bu = URL.createObjectURL(x.response), img = new Image();
+    img.onload = function () {
+      try {
+        var w = Math.min(800, img.width), h = Math.round(img.height * w / img.width);
+        var cv = document.createElement("canvas"); cv.width = w; cv.height = h;
+        cv.getContext("2d").drawImage(img, 0, 0, w, h);
+        bitti(cv.toDataURL("image/jpeg", 0.55));
+      } catch (e) { bitti(null); }
+      URL.revokeObjectURL(bu);
+    };
+    img.onerror = function () { URL.revokeObjectURL(bu); bitti(null); };
+    img.src = bu;
+  };
+  x.onerror = x.ontimeout = function () { bitti(null); };
+  x.send();
+}
+function resimleriSakla() {
+  var gerekli = haberler.filter(function (h) { return h.resim; }).slice(0, 15).map(function (h) { return h.resim; });
+  var yeniDepo = {}, sira = 0;
+  gerekli.forEach(function (u) { if (resimDepo[u]) yeniDepo[u] = resimDepo[u]; });
+  (function sonraki() {
+    while (sira < gerekli.length && yeniDepo[gerekli[sira]]) sira++;
+    if (sira >= gerekli.length) {
+      resimDepo = yeniDepo;
+      // Depolama dolarsa en sondakilerden başlayarak at
+      var anahtarlar = Object.keys(resimDepo);
+      while (anahtarlar.length) {
+        try { localStorage.setItem("onbellekResim", JSON.stringify(resimDepo)); break; }
+        catch (e) { delete resimDepo[anahtarlar.pop()]; }
+      }
+      return;
+    }
+    var u = gerekli[sira++];
+    resimKucult(u, function (veri) { if (veri) yeniDepo[u] = veri; setTimeout(sonraki, 300); });
+  })();
+}
+
+// Açılışta internet beklemeden son kaydedilenleri göster
+(function () {
+  try {
+    var k = JSON.parse(hafiza("onbellekHaber") || "null");
+    if (k && k.haberler && k.haberler.length) { haberler = k.haberler; sonGuncelleme = k.zaman; ciz(); }
+  } catch (e) {}
+})();
+window.addEventListener("offline", function () { cevrimDurumu(false); });
+window.addEventListener("online", function () { haberCek(); hava(); doviz(); });
+
+haberCek(); setInterval(haberCek, 10 * 60000);
+
+// ---- KAYAN ŞERİT ----
+// Hareketi CSS animasyonu yapar (ekran kartında akıcı çalışır); burada yalnızca hız ayarlanır.
+function kaydirBaslat() {
+  var tr = $("#track");
+  tr.style.animationName = "none"; tr.offsetWidth; tr.style.animationName = "";
+  tr.style.animationDuration = Math.max(20, (tr.scrollWidth / 2) / 90) + "s";   // saniyede ~90 piksel
+  tr.style.animationPlayState = "running";
+}
+
+// ---- İSİMLER (8 tuşu aç/kapat) ----
+if (hafiza("isimGizli") === "1") $("#love").className = "gizli";
+function isimDegistir() {
+  var gizli = $("#love").className !== "gizli";
+  $("#love").className = gizli ? "gizli" : "";
+  hafiza("isimGizli", gizli ? "1" : "0");
+}
+
+// ---- NAVİGASYON ----
+var EV = null, evModu = false;
+try { EV = JSON.parse(hafiza("evKonum") || "null"); } catch (e) {}
+function evYaz() { $("#evAd").textContent = EV ? EV.ad : "Ev konumu seçilmedi"; }
+function evAyarla() {
+  evModu = true; navOdak = HEDEFLER.length; odakCiz();
+  haritaTemizle("Ev adresini aşağıya yaz (ör. sokak ve mahalle), OK'ye bas.");
+  var a = $("#ara"); a.placeholder = "🏠 Ev adresin (ör. sokak ve mahalle)"; a.value = ""; a.focus();
+}
+var HEDEFLER = [
+  { ad: "Esenler", lat: 41.0376175, lon: 28.8824519 },
+  { ad: "Yüzyıl Köprüsü", lat: 41.055498, lon: 28.856291 },
+  { ad: "Taksim", lat: 41.0378331, lon: 28.9850165 },
+  { ad: "Kadıköy", lat: 40.990501, lon: 29.019968 },
+  { ad: "İstanbul Havalimanı", lat: 41.2748684, lon: 28.7322749 },
+  { ad: "Sabiha Gökçen", lat: 40.9064421, lon: 29.3114781 },
+  { ad: "Mall of İstanbul", lat: 41.063255, lon: 28.8069622 },
+  { ad: "Beylikdüzü", lat: 41.0038148, lon: 28.6372878 }
+];
+var SUTUN = 4, navOdak = 0, navAcik = false, sonHedef = null, arabaZaman = null, sayacZaman = null;
+try { sonHedef = JSON.parse(hafiza("sonHedef")); } catch (e) {}
+
+function secenekCiz() {
+  var h = "";
+  HEDEFLER.forEach(function (d, i) { h += '<button class="opt" onmouseover="navOdak=' + i + ';odakCiz()" onclick="hedefSec(' + i + ')">📍 ' + esc(d.ad) + "</button>"; });
+  h += '<input id="ara" placeholder="🔎 Başka bir yer yaz, OK\'ye bas…" onfocus="navOdak=' + HEDEFLER.length + ';odakCiz()">';
+  $("#secenek").innerHTML = h;
+  $("#ara").addEventListener("keydown", function (e) { if (e.keyCode === 13) { e.stopPropagation(); ara(this.value); } });
+}
+function odaklar() { return Array.prototype.slice.call(document.querySelectorAll("#secenek .opt, #ara")); }
+function odakCiz() { odaklar().forEach(function (el, i) { el.classList.toggle("odak", i === navOdak); }); }
+function navAc() {
+  navAcik = true; $("#modal").className = "acik"; secenekCiz(); navOdak = 0; odakCiz(); evYaz();
+  if (!EV) { evAyarla(); return; }
+  haritaTemizle("Bir hedef seç, rotayı çizeyim.");
+  if (sonHedef) {
+    for (var i = 0; i < HEDEFLER.length; i++) if (HEDEFLER[i].ad === sonHedef.ad) { navOdak = i; odakCiz(); }
+    rota(sonHedef);
+  }
+}
+function navKapat() { navAcik = false; $("#modal").className = ""; clearInterval(arabaZaman); clearInterval(sayacZaman); if (document.activeElement) document.activeElement.blur(); }
+function hedefSec(i) {
+  navOdak = i; odakCiz();
+  odaklar().forEach(function (el, j) { el.classList.toggle("secili", j === i); });
+  rota(HEDEFLER[i]);
+}
+function haritaTemizle(yazi) {
+  clearInterval(arabaZaman); clearInterval(sayacZaman);
+  $("#haritaKutu").innerHTML = '<div id="bekle">' + esc(yazi) + "</div>";
+  $("#bilgi").innerHTML = '<div class="hedef" style="color:var(--muted)">Süre burada görünecek</div>';
+}
+
+function ara(q) {
+  q = (q || "").trim(); if (!q) return;
+  haritaTemizle("Aranıyor…");
+  get("https://photon.komoot.io/api/?limit=1&lat=41.03&lon=28.67&q=" + encodeURIComponent(q + " İstanbul"), function (t) {
+    var f = t && JSON.parse(t).features[0];
+    if (!f) { haritaTemizle("Bu yeri bulamadım, başka türlü yazmayı dene."); return; }
+    var p = f.properties;
+    var ad = [p.name, p.district || p.city].filter(function (x) { return x; }).join(", ");
+    if (evModu) {
+      EV = { ad: ad, lat: f.geometry.coordinates[1], lon: f.geometry.coordinates[0] };
+      hafiza("evKonum", JSON.stringify(EV)); evModu = false; evYaz();
+      $("#ara").placeholder = "🔎 Başka bir yer yaz, OK'ye bas…"; $("#ara").value = "";
+      sonHedef = null; hafiza("sonHedef", ""); navOzetCiz();
+      haritaTemizle("🏠 Ev kaydedildi: " + ad + ". Şimdi bir hedef seç.");
+      return;
+    }
+    rota({ ad: ad, lat: f.geometry.coordinates[1], lon: f.geometry.coordinates[0] });
+  });
+}
+
+var rotaNo = 0;   // yalnızca en son seçilen hedefin cevabı çizilsin
+function rota(d, sessiz) {
+  if (!EV) return;
+  var no = ++rotaNo;
+  if (!sessiz) haritaTemizle("Rota hesaplanıyor…");
+  var u = "https://router.project-osrm.org/route/v1/driving/" + EV.lon + "," + EV.lat + ";" + d.lon + "," + d.lat + "?overview=full&geometries=geojson";
+  get(u, function (t) {
+    var j = t && JSON.parse(t), r = j && j.routes && j.routes[0];
+    if (no !== rotaNo) return;
+    if (!r) { if (!sessiz) haritaTemizle("Rota hesaplanamadı."); return; }
+    var dk = Math.round(r.duration / 60), km = (r.distance / 1000).toFixed(1).replace(".", ",");
+    sonHedef = { ad: d.ad, lat: d.lat, lon: d.lon, dk: dk, km: km };
+    hafiza("sonHedef", JSON.stringify(sonHedef));
+    navOzetCiz();
+    if (!sessiz && navAcik) rotaCiz(r.geometry.coordinates, d.ad, dk, km);
+  });
+}
+
+// Rotayı çizer: iki pin düşer, yol akarak çizilir, araba yol boyunca gider, dakika sayarak artar.
+function rotaCiz(koord, hedefAd, dk, km) {
+  var W = 950, H = 340, P = 60;
+  var lat0 = koord[0][1] * Math.PI / 180, cos = Math.cos(lat0);
+  var xs = koord.map(function (c) { return c[0] * cos; }), ys = koord.map(function (c) { return -c[1]; });
+  var minX = Math.min.apply(null, xs), maxX = Math.max.apply(null, xs), minY = Math.min.apply(null, ys), maxY = Math.max.apply(null, ys);
+  var s = Math.min((W - 2 * P) / (maxX - minX || 1e-6), (H - 2 * P) / (maxY - minY || 1e-6));
+  var ox = (W - (maxX - minX) * s) / 2, oy = (H - (maxY - minY) * s) / 2;
+  var pts = koord.map(function (c, i) { return [ox + (xs[i] - minX) * s, oy + (ys[i] - minY) * s]; });
+  var dStr = "M" + pts.map(function (p) { return p[0].toFixed(1) + "," + p[1].toFixed(1); }).join("L");
+  var a = pts[0], b = pts[pts.length - 1];
+
+  var izgara = "";
+  for (var gx = 0; gx <= W; gx += 50) izgara += '<line class="izgara" x1="' + gx + '" y1="0" x2="' + gx + '" y2="' + H + '"/>';
+  for (var gy = 0; gy <= H; gy += 50) izgara += '<line class="izgara" x1="0" y1="' + gy + '" x2="' + W + '" y2="' + gy + '"/>';
+
+  function pin(p, renk, etiket, gecikme, sol) {
+    var tx = sol ? -18 : 18, anchor = sol ? "end" : "start";
+    return '<g transform="translate(' + p[0].toFixed(1) + "," + p[1].toFixed(1) + ')">' +
+      '<circle class="halka" r="12" fill="none" stroke="' + renk + '" stroke-width="3" style="animation-delay:' + gecikme + 's"/>' +
+      '<g class="pin dus" style="animation-delay:' + gecikme + 's"><path d="M0,0 C-4,-10 -16,-18 -16,-30 A16,16 0 1 1 16,-30 C16,-18 4,-10 0,0 Z" fill="' + renk + '"/>' +
+      '<circle cx="0" cy="-30" r="6" fill="#0b1022"/></g>' +
+      '<text class="etiket" x="' + tx + '" y="-40" text-anchor="' + anchor + '" style="opacity:0;animation:dus .5s ease ' + (gecikme + .2) + 's forwards">' + esc(etiket) + "</text></g>";
+  }
+  var hedefSolda = b[0] > W - 220;
+  $("#haritaKutu").innerHTML =
+    '<svg viewBox="0 0 ' + W + " " + H + '" preserveAspectRatio="xMidYMid meet">' +
+    '<defs><linearGradient id="yolRenk" x1="0" x2="1"><stop offset="0" stop-color="#ffb03b"/><stop offset="1" stop-color="#ff4d6d"/></linearGradient>' +
+    '<filter id="parla"><feGaussianBlur stdDeviation="4"/></filter></defs>' +
+    izgara +
+    '<path class="yolGolge" d="' + dStr + '"/>' +
+    '<path class="yol" id="yol" d="' + dStr + '"/>' +
+    pin(a, "#5b8cff", "Ev", 0, a[0] > W - 120) +
+    pin(b, "#ff4d6d", hedefAd, 1.5, hedefSolda) +
+    '<g id="araba" style="opacity:0"><circle r="16" fill="#ffb03b" opacity=".35" filter="url(#parla)"/><circle r="8" fill="#fff"/></g>' +
+    "</svg>";
+
+  // yol akarak çizilsin
+  var yol = $("#yol"), L = yol.getTotalLength();
+  yol.style.strokeDasharray = L; yol.style.strokeDashoffset = L;
+  yol.getBoundingClientRect();
+  yol.style.transition = "stroke-dashoffset 1.6s cubic-bezier(.6,.1,.3,1) .3s";
+  yol.style.strokeDashoffset = "0";
+
+  // dakika sayacı
+  $("#bilgi").innerHTML = '<div class="hedef">📍 ' + esc(hedefAd) + '</div><div class="dk" id="dkSay">0 dk</div>' +
+    '<div class="km">' + km + " km · arabayla</div>" +
+    '<div class="not">Trafik hesaba katılmadan tahmini süre. Yoğun saatlerde daha uzun sürebilir.</div>';
+  var bas = Date.now();
+  clearInterval(sayacZaman);
+  sayacZaman = setInterval(function () {
+    var o = Math.min(1, (Date.now() - bas - 300) / 1600); if (o < 0) o = 0;
+    var e = 1 - Math.pow(1 - o, 3);
+    $("#dkSay").textContent = sureYaz(Math.round(dk * e));
+    if (o >= 1) clearInterval(sayacZaman);
+  }, 40);
+
+  // araba yol boyunca gitsin
+  var araba = $("#araba"), t0 = null;
+  clearInterval(arabaZaman);
+  setTimeout(function () {
+    araba.style.opacity = 1; t0 = Date.now();
+    arabaZaman = setInterval(function () {
+      var o = ((Date.now() - t0) % 4000) / 4000, p = yol.getPointAtLength(o * L);
+      araba.setAttribute("transform", "translate(" + p.x.toFixed(1) + "," + p.y.toFixed(1) + ")");
+    }, 33);
+  }, 2000);
+}
+function sureYaz(dk) { return dk < 60 ? dk + " dk" : Math.floor(dk / 60) + " sa " + (dk % 60) + " dk"; }
+function navOzetCiz() {
+  $("#navOzet").textContent = sonHedef ? sonHedef.ad + " · ~" + sureYaz(sonHedef.dk) : "Nereye gidiyoruz?";
+}
+navOzetCiz();
+setInterval(function () { if (sonHedef && !navAcik) rota(sonHedef, true); }, 15 * 60000);
+
+// ---- TELEFON MİKROFONU ----
+// Telefon, TV'nin kalıcı kimliğine WebRTC ile bağlanır; ses doğrudan ev ağı üzerinden gelir.
+var MIK = { id: hafiza("mikId"), acik: false, peer: null, call: null, ctx: null, analiz: null };
+if (!MIK.id) { MIK.id = "onurtv-" + Math.random().toString(36).slice(2, 10); hafiza("mikId", MIK.id); }
+function mikAdres() { var b = hafiza("mikAdres") || "https://onteo.github.io/onur-tv-mikrofon/"; return b ? b + "#" + MIK.id : ""; }
+function mikDurum(t, cls) { $("#mikDurum").className = cls; $("#mikDurum span").textContent = t; }
+
+function mikBaslat() {
+  if (!window.Peer) return;
+  var p = MIK.peer = new Peer(MIK.id);
+  p.on("call", function (c) {
+    if (MIK.call) { try { MIK.call.close(); } catch (e) {} }
+    MIK.call = c;
+    c.answer(undefined, { sdpTransform: kisaPaket });
+    tamponuKis(c);
+    c.on("stream", function (s) {
+      var a = $("#mikSes"); a.srcObject = s; a.volume = 1;
+      var oynat = a.play(); if (oynat && oynat.catch) oynat.catch(function () {});
+      mikSeviye();
+      $("#mikCanli").className = "acik"; $("#mikTus").className = "canli";
+      mikDurum("Bağlandı · sesin TV'den çıkıyor", "ok");
+      if (MIK.acik) setTimeout(mikKapat, 2500);
+    });
+    c.on("close", mikBitti);
+    c.on("error", mikBitti);
+  });
+  p.on("connection", function (conn) {
+    conn.on("data", function (d) {
+      if (d && (d.tip === "temizle" || d.tip === "geriAl")) {
+        var sonuc = bandiTemizle(d.tip === "temizle");
+        try { conn.send({ tip: "temizlendi", silinen: sonuc }); } catch (e) {}
+        return;
+      }
+      if (!d || d.tip !== "mesaj") return;
+      var ok = sonDakikaEkle(d.metin, d.kimden, d.gecikme, d.ses);
+      try { conn.send({ tip: "alindi", ok: ok, gecikme: parseInt(d.gecikme, 10) || 0 }); } catch (e) {}
+    });
+  });
+  p.on("disconnected", function () { setTimeout(function () { if (!p.destroyed) p.reconnect(); }, 3000); });
+  p.on("error", function (e) {
+    if (e.type === "unavailable-id") { MIK.id = "onurtv-" + Math.random().toString(36).slice(2, 10); hafiza("mikId", MIK.id); }
+    if (e.type === "peer-unavailable") return;
+    try { p.destroy(); } catch (x) {}
+    setTimeout(mikBaslat, 5000);
+  });
+}
+// Gecikmeyi azaltmak için: sesi 10 ms'lik paketlerle iste, TV'nin tamponunu en aza indir
+function kisaPaket(sdp) {
+  return sdp.replace(/(a=rtpmap:\d+ opus\/48000\/2\r\n)/, "$1a=ptime:10\r\na=maxptime:10\r\n");
+}
+function tamponuKis(c) {
+  var n = 0, t = setInterval(function () {
+    var pc = c.peerConnection;
+    if (pc && pc.getReceivers().length) {
+      pc.getReceivers().forEach(function (r) {
+        try { if ("playoutDelayHint" in r) r.playoutDelayHint = 0; } catch (e) {}
+        try { if ("jitterBufferTarget" in r) r.jitterBufferTarget = 0; } catch (e) {}
+      });
+      clearInterval(t);
+    } else if (++n > 50) clearInterval(t);
+  }, 100);
+}
+function mikBitti() {
+  MIK.call = null;
+  $("#mikCanli").className = ""; $("#mikTus").className = "";
+  mikDurum("Telefon bekleniyor…", "bekle");
+}
+function mikSeviye() {
+  // TV tarayıcısı uzaktan gelen sesi WebAudio ile ölçemiyor; seviyeyi bağlantı istatistiklerinden okuyoruz.
+  var cub = document.querySelectorAll("#mikCanli .cubuk i"), gecmis = [0, 0, 0, 0, 0, 0, 0];
+  (function dongu() {
+    var c = MIK.call, pc = c && c.peerConnection;
+    if (!c) return;
+    if (!pc || !pc.getStats) { setTimeout(dongu, 300); return; }
+    pc.getStats().then(function (r) {
+      var sv = 0;
+      r.forEach(function (x) {
+        if (x.kind === "audio" && x.type === "track" && typeof x.audioLevel === "number") sv = Math.max(sv, x.audioLevel);
+        else if (x.kind === "audio" && x.type === "inbound-rtp" && typeof x.audioLevel === "number") sv = Math.max(sv, x.audioLevel > 1 ? x.audioLevel / 32767 : x.audioLevel);
+      });
+      gecmis.shift(); gecmis.push(Math.min(1, sv * 3));
+      for (var i = 0; i < cub.length; i++) cub[i].style.height = (4 + gecmis[i] * 22) + "px";
+    }).catch(function () {});
+    setTimeout(dongu, 120);
+  })();
+}
+function mikAc() {
+  MIK.acik = true; $("#mikModal").className = "acik";
+  var adres = mikAdres();
+  if (!adres) { $("#qr").innerHTML = '<div style="color:#111;font-size:22px;text-align:center">Telefon sayfası henüz ayarlanmadı</div>'; }
+  else { var q = qrcode(0, "M"); q.addData(adres); q.make(); $("#qr").innerHTML = q.createSvgTag({ cellSize: 8, margin: 0, scalable: true }); }
+  if (MIK.call) mikDurum("Bağlandı · sesin TV'den çıkıyor", "ok");
+  else if (!MIK.peer || MIK.peer.disconnected) mikDurum("Sunucuya bağlanılıyor…", "bekle");
+  else mikDurum("Telefon bekleniyor…", "bekle");
+}
+function mikKapat() { MIK.acik = false; $("#mikModal").className = ""; }
+mikBaslat();
+mesajQrCiz();
+
+// ---- KUMANDA ----
+document.addEventListener("keydown", function (e) {
+  var k = e.keyCode;
+  if (k === 56 || k === 104) { isimDegistir(); return; }            // 8 tuşu: isimleri aç/kapat
+  if (k === 404) { MIK.acik ? mikKapat() : mikAc(); return; }      // yeşil tuş: mikrofon
+  if (k === 461 || k === 27) {                                      // Geri tuşu
+    if (MIK.acik) mikKapat(); else if (navAcik) navKapat(); else return;
+    e.preventDefault(); return;
+  }
+  if (MIK.acik) { e.preventDefault(); return; }
+  if (navAcik) {
+    var el = odaklar(), n = el.length;
+    if (document.activeElement === $("#ara") && (k === 37 || k === 39)) return; // yazarken ◀▶ imleç için
+    if (k === 39) navOdak = Math.min(n - 1, navOdak + 1);
+    else if (k === 37) navOdak = Math.max(0, navOdak - 1);
+    else if (k === 40) navOdak = Math.min(n - 1, navOdak + SUTUN);
+    else if (k === 38) navOdak = navOdak === n - 1 ? n - 1 - SUTUN : Math.max(0, navOdak - SUTUN);
+    else if (k === 13) { var h = el[navOdak]; if (h.id === "ara") h.focus(); else h.click(); e.preventDefault(); return; }
+    else return;
+    odakCiz(); if (document.activeElement === $("#ara") && navOdak !== n - 1) $("#ara").blur();
+    e.preventDefault(); return;
+  }
+  if (k === 403 || k === 38) { navAc(); return; }   // kırmızı tuş veya ▲: navigasyon
+  if (k === 39) ilerle(1);                          // sağ ok
+  else if (k === 37) ilerle(-1);                    // sol ok
+  else if (k === 13) { haberCek(); hava(); doviz(); } // OK: yenile
+});
+
+// ---- EKRAN YANMASI KORUMASI ----
+setInterval(function () {
+  var dx = Math.round(Math.random() * 16 - 8), dy = Math.round(Math.random() * 10 - 5);
+  $("#stage").style.transform = "translate(" + dx + "px," + dy + "px)";
+}, 60000);
+</script>
+</body>
+</html>

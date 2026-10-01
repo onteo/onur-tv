@@ -1,0 +1,20 @@
+# TV tarayıcısı haber sitelerinden doğrudan veri çekemediği için
+# haberler 15 dakikada bir burada çekilip haberler.json olarak siteye konur.
+name: Haberleri güncelle
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  guncelle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 haberler.py
+      - run: |
+          git config user.name "onur-tv-haber-botu"
+          git config user.email "actions@users.noreply.github.com"
+          git add haberler.json
+          git diff --cached --quiet || (git commit -m "Haberler güncellendi" && git push)

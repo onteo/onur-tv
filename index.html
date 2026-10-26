@@ -244,9 +244,21 @@
   #mikKutu .ipucu2 { margin-top: 22px; font-size: 18px; color: var(--muted); }
 
   #kutu .ipucu { margin-top: 18px; font-size: 18px; color: var(--muted); }
+  /* ---- Tam ekran düğmesi: fare oynayınca görünür, 3 sn sonra kaybolur ---- */
+  #tamEkran { position: absolute; right: 24px; top: 14px; z-index: 50; display: flex; align-items: center; gap: 10px;
+    font: inherit; font-size: 20px; font-weight: 600; color: #fff; cursor: pointer;
+    background: rgba(14,20,38,0.85); border: 1px solid rgba(255,255,255,0.2); border-radius: 14px; padding: 12px 20px;
+    opacity: 0; pointer-events: none; transition: opacity .3s ease; }
+  #tamEkran svg { width: 24px; height: 24px; }
+  body.fareVar #tamEkran { opacity: 1; pointer-events: auto; }
+  body.imlecYok, body.imlecYok * { cursor: none !important; }
 </style>
 </head>
 <body>
+<button id="tamEkran" onclick="tamEkranDegis()" title="Tam ekran (F)">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+  <span id="tamEkranYazi">Tam ekran</span>
+</button>
 <div id="stage">
   <canvas id="globe" width="620" height="620"></canvas>
 
@@ -354,6 +366,39 @@
   }
   window.addEventListener("resize", sigdir);
   document.addEventListener("DOMContentLoaded", sigdir);
+})();
+</script>
+<script>
+// ---- TAM EKRAN ----
+// Düğme, F tuşu ya da çift tıklama ile açılır/kapanır. Fare durunca düğme ve imleç gizlenir.
+function tamEkranMi() { return !!(document.fullscreenElement || document.webkitFullscreenElement); }
+function tamEkranDegis() {
+  var el = document.documentElement;
+  if (!tamEkranMi()) {
+    var ac = el.requestFullscreen || el.webkitRequestFullscreen;
+    if (ac) { try { var s = ac.call(el); if (s && s.catch) s.catch(function () {}); } catch (e) {} }
+  } else {
+    var kapat = document.exitFullscreen || document.webkitExitFullscreen;
+    if (kapat) kapat.call(document);
+  }
+}
+function tamEkranYaz() {
+  var y = document.getElementById("tamEkranYazi");
+  if (y) y.textContent = tamEkranMi() ? "Tam ekrandan çık" : "Tam ekran";
+}
+document.addEventListener("fullscreenchange", tamEkranYaz);
+document.addEventListener("webkitfullscreenchange", tamEkranYaz);
+document.addEventListener("dblclick", function (e) { if (!e.target.closest("#nav, #modal, #tamEkran")) tamEkranDegis(); });
+document.addEventListener("keydown", function (e) { if ((e.key === "f" || e.key === "F") && !/INPUT|TEXTAREA/.test(document.activeElement.tagName)) tamEkranDegis(); });
+(function () {
+  var zaman = null;
+  function goster() {
+    document.body.classList.add("fareVar"); document.body.classList.remove("imlecYok");
+    clearTimeout(zaman);
+    zaman = setTimeout(function () { document.body.classList.remove("fareVar"); document.body.classList.add("imlecYok"); }, 3000);
+  }
+  document.addEventListener("mousemove", goster);
+  document.addEventListener("DOMContentLoaded", goster);
 })();
 </script>
 <script src="lib/d3-array.min.js"></script>

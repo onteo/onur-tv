@@ -250,11 +250,73 @@
     background: rgba(14,20,38,0.85); border: 1px solid rgba(255,255,255,0.2); border-radius: 14px; padding: 12px 20px;
     opacity: 0; pointer-events: none; transition: opacity .3s ease; }
   #tamEkran svg { width: 24px; height: 24px; }
-  body.fareVar #tamEkran { opacity: 1; pointer-events: auto; }
+  body.fareVar #tamEkran, body.fareVar #mesajTus { opacity: 1; pointer-events: auto; }
+  #mesajTus { position: absolute; right: 250px; top: 14px; z-index: 50; display: flex; align-items: center; gap: 10px;
+    font: inherit; font-size: 20px; font-weight: 600; color: #fff; cursor: pointer;
+    background: linear-gradient(120deg, #ff3b5c, #c1121f); border: 0; border-radius: 14px; padding: 12px 20px;
+    opacity: 0; pointer-events: none; transition: opacity .3s ease; }
+
+  /* ---- Mesaj paneli ---- */
+  #mesajPanel { position: absolute; inset: 0; z-index: 60; display: none; align-items: center; justify-content: center; background: rgba(3,5,10,0.78); }
+  #mesajPanel.acik { display: flex; }
+  #mpKutu { width: 1180px; display: grid; grid-template-columns: 1fr 420px; gap: 36px; background: linear-gradient(180deg, #141b30, #0e1426);
+    border: 1px solid var(--line); border-radius: 30px; padding: 44px 48px; box-shadow: 0 40px 120px rgba(0,0,0,0.6); }
+  #mpKutu h3 { font-size: 36px; font-weight: 700; display: flex; align-items: center; gap: 14px; }
+  #mpKutu h3 span { font-size: 16px; font-weight: 800; letter-spacing: 2px; background: linear-gradient(120deg, #ff3b5c, #c1121f); padding: 6px 12px; border-radius: 8px; }
+  .mpEtiket { font-size: 16px; font-weight: 600; letter-spacing: 2px; color: var(--muted); margin: 22px 0 10px; }
+  #mpMetin, #mpKimden { width: 100%; font: inherit; font-size: 26px; color: var(--text); background: rgba(255,255,255,0.06);
+    border: 2px solid var(--line); border-radius: 16px; padding: 16px 20px; outline: none; }
+  #mpMetin { height: 150px; resize: none; line-height: 1.35; }
+  #mpMetin:focus, #mpKimden:focus { border-color: var(--accent); }
+  .mpSatir { display: flex; align-items: center; gap: 12px; margin-top: 12px; }
+  .mpSatir .bosluk { flex: 1; }
+  .mpDugme { white-space: nowrap; font: inherit; font-size: 18px; font-weight: 600; color: var(--text); background: rgba(255,255,255,0.07);
+    border: 1px solid var(--line); border-radius: 12px; padding: 10px 18px; cursor: pointer; }
+  .mpDugme:hover { border-color: var(--accent); }
+  #mpSay { font-size: 18px; color: var(--muted); }
+  #mpGonder { width: 100%; margin-top: 26px; font: inherit; font-size: 26px; font-weight: 800; color: #fff; border: 0; border-radius: 18px; padding: 18px;
+    background: linear-gradient(135deg, var(--accent), var(--pink)); cursor: pointer; }
+  #mpDurum { margin-top: 14px; font-size: 20px; min-height: 26px; color: var(--muted); }
+  #mpDurum.ok { color: #6ee7b7; }
+  .mpAnahtar { display: flex; align-items: center; gap: 12px; font-size: 20px; margin-top: 18px; cursor: pointer; }
+  .mpAnahtar input { width: 24px; height: 24px; accent-color: #ff3b5c; }
+  #mpGecmis { display: flex; flex-direction: column; gap: 10px; max-height: 470px; overflow: auto; }
+  .mpOge { display: flex; align-items: center; background: rgba(255,255,255,0.05); border: 1px solid var(--line); border-radius: 14px; }
+  .mpOge:hover { border-color: var(--accent); }
+  .mpOge .al { flex: 1; min-width: 0; font: inherit; text-align: left; color: var(--text); background: none; border: 0; padding: 14px 16px; cursor: pointer; }
+  .mpOge .al b { display: block; font-size: 20px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .mpOge .al small { display: block; font-size: 15px; color: var(--muted); margin-top: 4px; }
+  .mpOge .sil { font: inherit; font-size: 26px; color: var(--muted); background: none; border: 0; padding: 8px 16px; cursor: pointer; }
+  .mpBos { font-size: 18px; color: var(--muted); }
   body.imlecYok, body.imlecYok * { cursor: none !important; }
 </style>
 </head>
 <body>
+<button id="mesajTus" onclick="mesajPanelAc()" title="Son dakika mesajı yaz (M)">✍️ Mesaj yaz</button>
+<div id="mesajPanel" onclick="if(event.target===this)mesajPanelKapat()">
+  <div id="mpKutu">
+    <div>
+      <h3><span>SON DAKİKA</span> Banda mesaj yaz</h3>
+      <div class="mpEtiket">MESAJ</div>
+      <textarea id="mpMetin" maxlength="160" placeholder="Örn: Yemek hazır, herkes sofraya! 🍽️"></textarea>
+      <div class="mpSatir">
+        <button class="mpDugme" id="mpYapistir" type="button">📋 Yapıştır</button>
+        <button class="mpDugme" id="mpGeriAl" type="button">↩️ Son mesajı geri al</button>
+        <button class="mpDugme" id="mpTemizle" type="button">🧹 Bandı temizle</button>
+        <span class="bosluk"></span><span id="mpSay">0 / 160</span>
+      </div>
+      <div class="mpEtiket">KİMDEN (İSTEĞE BAĞLI)</div>
+      <input id="mpKimden" maxlength="30" placeholder="Örn: Onur">
+      <label class="mpAnahtar"><input type="checkbox" id="mpMuzik" checked> 🎵 Son dakika müziği çalsın</label>
+      <button id="mpGonder" type="button">📺 Banda gönder</button>
+      <div id="mpDurum"></div>
+    </div>
+    <div>
+      <div class="mpEtiket" style="margin-top:6px; display:flex; justify-content:space-between;">SON MESAJLARIM <a href="#" id="mpGecmisSil" style="color:var(--muted); letter-spacing:0; font-weight:400;">Tümünü sil</a></div>
+      <div id="mpGecmis"></div>
+    </div>
+  </div>
+</div>
 <button id="tamEkran" onclick="tamEkranDegis()" title="Tam ekran (F)">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
   <span id="tamEkranYazi">Tam ekran</span>
@@ -1084,6 +1146,9 @@ mesajQrCiz();
 // ---- KUMANDA ----
 document.addEventListener("keydown", function (e) {
   var k = e.keyCode;
+  if (mesajPanelAcik) { if (k === 27) mesajPanelKapat(); return; }   // panel açıkken kısayollar kapalı, Esc kapatır
+  if (/INPUT|TEXTAREA/.test(document.activeElement.tagName)) return;
+  if (k === 77) { mesajPanelAc(); e.preventDefault(); return; }     // M: mesaj paneli
   if (k === 56 || k === 104) { isimDegistir(); return; }            // 8 tuşu: isimleri aç/kapat
   if (k === 404) { MIK.acik ? mikKapat() : mikAc(); return; }      // yeşil tuş: mikrofon
   if (k === 461 || k === 27) {                                      // Geri tuşu
@@ -1114,6 +1179,66 @@ setInterval(function () {
   var dx = Math.round(Math.random() * 16 - 8), dy = Math.round(Math.random() * 10 - 5);
   $("#stage").style.transform = "translate(" + dx + "px," + dy + "px)";
 }, 60000);
+
+// ---- MESAJ PANELİ (web sürümü): telefondaki sayfanın aynısı, mesaj doğrudan banda düşer ----
+var mesajPanelAcik = false;
+function mesajPanelAc() {
+  mesajPanelAcik = true; $("#mesajPanel").className = "acik"; mpGecmisCiz();
+  try { $("#mpKimden").value = localStorage.getItem("mpKimden") || ""; $("#mpMuzik").checked = localStorage.getItem("mpMuzik") !== "0"; } catch (e) {}
+  setTimeout(function () { $("#mpMetin").focus(); }, 50);
+}
+function mesajPanelKapat() { mesajPanelAcik = false; $("#mesajPanel").className = ""; if (document.activeElement) document.activeElement.blur(); }
+function mpDurum(t, ok) { $("#mpDurum").textContent = t; $("#mpDurum").className = ok ? "ok" : ""; }
+function mpSay() { $("#mpSay").textContent = $("#mpMetin").value.length + " / 160"; }
+$("#mpMetin").addEventListener("input", mpSay);
+$("#mpMetin").addEventListener("keydown", function (e) { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); $("#mpGonder").click(); } });
+$("#mpKimden").addEventListener("input", function () { try { localStorage.setItem("mpKimden", this.value); } catch (e) {} });
+$("#mpMuzik").addEventListener("change", function () { try { localStorage.setItem("mpMuzik", this.checked ? "1" : "0"); } catch (e) {} });
+
+$("#mpYapistir").addEventListener("click", function () {
+  if (!navigator.clipboard || !navigator.clipboard.readText) { $("#mpMetin").focus(); mpDurum("⌘V ile yapıştırın."); return; }
+  navigator.clipboard.readText().then(function (t) {
+    t = (t || "").trim(); if (!t) { mpDurum("Panoda yazı yok."); return; }
+    $("#mpMetin").value = t.slice(0, 160); mpSay(); $("#mpMetin").focus();
+    mpDurum(t.length > 160 ? "Yapıştırıldı (160 karaktere kısaltıldı)" : "📋 Yapıştırıldı", true);
+  }).catch(function () { $("#mpMetin").focus(); mpDurum("Pano okunamadı, ⌘V ile yapıştırın."); });
+});
+
+var MP_GECMIS = "sonMesajlar";
+function mpGecmisOku() { try { return JSON.parse(localStorage.getItem(MP_GECMIS) || "[]"); } catch (e) { return []; } }
+function mpGecmisYaz(l) { try { localStorage.setItem(MP_GECMIS, JSON.stringify(l)); } catch (e) {} }
+function mpNeZaman(ms) {
+  var dk = Math.round((Date.now() - ms) / 60000);
+  if (dk < 1) return "az önce"; if (dk < 60) return dk + " dk önce";
+  if (dk < 1440) return Math.round(dk / 60) + " sa önce"; return Math.round(dk / 1440) + " gün önce";
+}
+function mpGecmisCiz() {
+  var l = mpGecmisOku();
+  $("#mpGecmis").innerHTML = l.length ? l.map(function (m, i) {
+    return '<div class="mpOge"><button class="al" type="button" data-i="' + i + '"><b>' + esc(m.metin) + '</b><small>' +
+      mpNeZaman(m.zaman) + (m.kimden ? " · " + esc(m.kimden) : "") + '</small></button><button class="sil" type="button" data-sil="' + i + '">×</button></div>';
+  }).join("") : '<div class="mpBos">Gönderdiğin mesajlar burada saklanır; dokununca kutuya geri gelir.</div>';
+}
+$("#mpGecmis").addEventListener("click", function (e) {
+  var al = e.target.closest(".al"), sil = e.target.closest(".sil"), l = mpGecmisOku();
+  if (sil) { l.splice(+sil.getAttribute("data-sil"), 1); mpGecmisYaz(l); mpGecmisCiz(); return; }
+  if (al) { var m = l[+al.getAttribute("data-i")]; if (!m) return; $("#mpMetin").value = m.metin; if (m.kimden) $("#mpKimden").value = m.kimden; mpSay(); $("#mpMetin").focus(); }
+});
+$("#mpGecmisSil").addEventListener("click", function (e) { e.preventDefault(); if (confirm("Kayıtlı son mesajlar silinsin mi?")) { mpGecmisYaz([]); mpGecmisCiz(); } });
+
+$("#mpGonder").addEventListener("click", function () {
+  var metin = $("#mpMetin").value.trim(), kimden = $("#mpKimden").value.trim();
+  if (!metin) { mpDurum("Önce bir mesaj yaz."); $("#mpMetin").focus(); return; }
+  if (sonDakikaEkle(metin, kimden, 0, $("#mpMuzik").checked)) {
+    var l = mpGecmisOku().filter(function (m) { return m.metin !== metin; });
+    l.unshift({ metin: metin, kimden: kimden, zaman: Date.now() }); mpGecmisYaz(l.slice(0, 15)); mpGecmisCiz();
+    $("#mpMetin").value = ""; mpSay();
+    mpDurum("✅ Bantta! Panel kapanıyor…", true);
+    setTimeout(mesajPanelKapat, 900);
+  }
+});
+$("#mpGeriAl").addEventListener("click", function () { var n = bandiTemizle(false); mpDurum(n ? "↩️ Son mesaj banttan kaldırıldı" : "Bantta mesaj yok", !!n); });
+$("#mpTemizle").addEventListener("click", function () { if (confirm("Banttaki tüm mesajlar silinsin mi?")) { var n = bandiTemizle(true); mpDurum("🧹 Bant temizlendi (" + n + " mesaj)", true); } });
 </script>
 </body>
 </html>
